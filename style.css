@@ -1,0 +1,59 @@
+h1 {
+    color:blue;
+}
+#rings {
+    display:flex;
+    border: 2px solid black;
+    height:500px;
+    justify-content:center;
+    padding-left:120px;
+    align-items:center;
+
+}
+.ring_1 {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 50%;
+    transform: translateX(-21px);
+  }
+  
+  .ring_2 {
+    width: 60px;
+    height: 60px;
+    border: 6px solid black;
+    border-radius: 50%;
+    transform: translateX(-44px);
+  }
+  
+  .ring_3 {
+    width: 70px;
+    height: 70px;
+    border: 7px solid black;
+    border-radius: 50%;
+    transform: translateX(-69px);
+  }
+  
+  .ring_4 {
+    width: 80px;
+    height: 80px;
+    border: 8px solid black;
+    border-radius: 50%;
+    transform: translateX(-96px);
+  }
+  
+  .ring_5 {
+    width: 90px;
+    height: 90px;
+    border: 9px solid black;
+    border-radius: 50%;
+    transform: translateX(-125px);
+  }
+  
+  .ring_6 {
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+    border-radius: 50%;
+    transform: translateX(-156px);
+  }

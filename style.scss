@@ -1,0 +1,15 @@
+@mixin ring($size: 10px,$color,$translation:20px) {
+    width:$size;
+    height:$size;
+    border:$size/10 solid $color;
+    border-radius:50%;
+    transform:translateX($translation);
+}
+
+
+@for $i from 1 through 6 {
+    .ring_#{$i} {
+        @include ring($size:$i*10px+40,$color:black,$translation:-$i*$i+$i*-20px);
+
+    }
+}
