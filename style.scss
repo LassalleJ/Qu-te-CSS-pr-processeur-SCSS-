@@ -7,32 +7,51 @@
     transform:translateX($translation);
     box-shadow: inset $size/15 $size/15  $size/10 darken($color,30%), $size/15 $size/15  $size/10 darken($color,30%);
 }
+$primary-color:rgb(133, 78, 14);
+$primary-light:scale-color($primary-color, $lightness:+50%);
+$primary-dark:scale-color($primary-color, $lightness:-50%);
 *{
     font-family: 'Aniron', sans-serif;
-    background-color:beige;
 }
-header p {
-    background-color:black;
-    height:80px;
-    margin:0;
+body {
+    background-color:$primary-light;
+}
+nav {
+    background-color:$primary-dark;
+    display:flex;
+    color:$primary-light;
+    align-items:center;
+    justify-content:space-between;
+    h2 {
+        margin-left:10px;
+        font-size:1.5em;
+    }
+    ul {
+        display: flex;
+        justify-content: right;
+        gap: 5%;
+        width:60%;
+        margin-right:20px;
+        li{
+            list-style:none;
+            font-size:1.2em;
+        }
+    }
   }
-  h1 {
-    color:rgb(133, 78, 14);
+h1 {
+    color:$primary-color;
     margin:20px;
     font-size:3em;
 }
   
 #rings {
       display:flex;
-      border: 2px solid black;
       justify-content:center;
       padding-left:120px;
       align-items:center;
       margin-top:80px;
       +h1{
-        border:2px solid black;
         text-align:center;
-
       }
   
   }
@@ -40,7 +59,6 @@ header p {
     display:flex;
     justify-content:center;
     align-items:center;
-    border:2px solid black;
     .ring_head {
         @include ring($size:120px, $color:orange,$translation:0px)
     }
@@ -49,7 +67,6 @@ section {
     display:flex;
     justify-content:center;
     align-items:center;
-    border:2px solid black;
     margin-top:80px;
     h1 {
         font-size:4em;
@@ -63,5 +80,28 @@ section {
     .ring_#{$i} {
         @include ring($size:$i*10px+40,$color:black,$translation:-$i*$i+$i*-20px);
 
+    }
+}
+footer {
+    background-color:$primary-dark;
+    color:$primary-light;
+    margin-top:200px;
+    ul{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows:5;
+        gap:2px;
+        justify-content:center;
+        padding-left:8%;
+        padding-top:10px;
+        li {
+            list-style:none;
+            font-size:1.5em;
+        }
+        }
+    h3 {
+        font-size:1.4em;
+        color:$primary-light;
+        padding:15px;
     }
 }
