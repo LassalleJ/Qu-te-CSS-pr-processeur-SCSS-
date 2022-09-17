@@ -4,8 +4,18 @@
     border:$size/10 solid $color;
     border-radius:50%;
     transform:translateX($translation);
+    box-shadow: inset $size/15 $size/15  $size/10 darken($color,30%), $size/15 $size/15  $size/10 darken($color,30%);
 }
 
+#head {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px solid black;
+    .ring_head {
+        @include ring($size:120px, $color:orange,$translation:0px)
+    }
+}
 
 @for $i from 1 through 6 {
     .ring_#{$i} {
